@@ -23,5 +23,5 @@ echo '###  ###'
 
 # echo '### Updates H5962 Flash Memory Space ###'
 rm -rf lede/target/linux/ramips/image/mt7621.mk
-wget -P lede/target/linux/ramips/image/ https://github.com/ZHOUJUNX/OpenWRT-HiWiFi-H5962-passwall/blob/main/mt7621.mk
+wget -P lede/target/linux/ramips/image/ https://github.com/ZHOUJUNX/OpenWRT-HiWiFi-H5962-ssr/blob/main/mt7621.mk
 echo '###  ###'
