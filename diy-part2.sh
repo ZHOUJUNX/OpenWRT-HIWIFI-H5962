@@ -1,3 +1,4 @@
+
 #!/bin/bash
 #
 # Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
@@ -11,4 +12,16 @@
 #
 
 # Modify default IP
-#sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/10.1.1.1/g' package/base-files/files/bin/config_generate
+echo '### Updates default IP gate ###'
+
+# echo '### Updates Theme Argon ###'
+# package/lean/luci-theme-argon /package/feeds/luci/luci-theme-argon
+rm -rf package/feeds/luci/luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/feeds/luci/luci-theme-argon
+echo '###  ###'
+
+# echo '### Updates H5962 Flash Memory Space ###'
+rm -rf lede/target/linux/ramips/image/mt7621.mk
+wget -P lede/target/linux/ramips/image/ https://github.com/ZHOUJUNX/OpenWRT-HiWiFi-H5962-passwall/blob/main/mt7621.mk
+echo '###  ###'
