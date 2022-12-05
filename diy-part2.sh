@@ -16,7 +16,6 @@ sed -i 's/192.168.1.1/10.1.1.1/g' package/base-files/files/bin/config_generate
 echo '### Updates default IP gate ###'
 
 # Updates Theme Argon #
-# package/lean/luci-theme-argon /package/feeds/luci/luci-theme-argon
 rm -rf package/feeds/luci/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/feeds/luci/luci-theme-argon
 echo '# Updates Theme Argon #'
@@ -41,7 +40,6 @@ echo '# luci-app-smartdns plug-in components #'
 # OpenAppFilter plug-in components #
 # git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 # echo '# OpenAppFilter plug-in components #'
-
 
 # Shutdown plug-in components #
 # git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
